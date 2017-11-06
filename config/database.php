@@ -41,6 +41,18 @@ return [
             'schema'   => 'public',
             'sslmode'  => 'prefer',
         ],
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', $db_config['host']),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', $db_config['database']),
+            'username' => env('DB_USERNAME', $db_config['username']),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
